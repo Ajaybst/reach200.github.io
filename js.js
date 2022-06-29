@@ -1,3 +1,8 @@
+//
+
+// ===================Player Switching Function==========================
+
+//
 function switches() {
   document.querySelector(`.div-${activePlayer}`).style.background = "black";
   document.querySelector(`.cscore-${activePlayer}`).textContent = 0;
@@ -9,9 +14,16 @@ function switches() {
   }
   document.querySelector(`.cscore-${activePlayer}`).textContent = score;
   document.querySelector(`.div-${activePlayer}`).style.background = "green";
+
+  alert("You got 1 , player switches");
+  //
 }
+//
+// =========================Rolling Dice And Game Starts Here=========================
+//
 let score = 0;
 let activePlayer = 0;
+document.querySelector(`.div-${activePlayer}`).style.background = "green";
 let cscore = [0, 0];
 let playing = true;
 document.querySelector(".roll").addEventListener("click", function () {
@@ -23,15 +35,23 @@ document.querySelector(".roll").addEventListener("click", function () {
       score += number;
       document.querySelector(`.cscore-${activePlayer}`).textContent = score;
     } else {
-      switches();
+      document.querySelector(".dice-n").textContent = 1;
+      setTimeout(switches, 100);
     }
   }
 });
+//
+
+// =================================== Hold Button Confi=================================
+
+//
 document.querySelector(".hold").addEventListener("click", function () {
   if (playing) {
     cscore[activePlayer] += score;
     document.querySelector(`#hs${activePlayer}`).textContent =
       cscore[activePlayer];
+    document.querySelector(".div-0").style.background = "green";
+    document.querySelector(".div-1").style.background = "green";
     document.querySelector(`.div-${activePlayer}`).style.background = "black";
     if (cscore[activePlayer] >= 200) {
       document.querySelector(
@@ -52,6 +72,11 @@ document.querySelector(".hold").addEventListener("click", function () {
     }
   }
 });
+//
+
+// ===================================Try Again Button Confi=================================
+
+//
 document.querySelector(".try-again").addEventListener("click", function () {
   document.querySelector("#winner").textContent = `Let's Play`;
   score = 0;
@@ -62,6 +87,10 @@ document.querySelector(".try-again").addEventListener("click", function () {
   document.querySelector("#hs1").textContent = "0";
   document.querySelector(".cscore-0").textContent = "0";
   document.querySelector(".cscore-1").textContent = "0";
-  document.querySelector(`.div-${activePlayer}`).style.background = "green";
+  document.querySelector(".div-0").style.background = "black";
+  document.querySelector(".div-1").style.background = "black";
   document.querySelector("#winner").style.background = `black`;
+  alert("Are You Sure Play Again");
+  document.querySelector(".div-0").style.background = "green";
+  document.querySelector(".dice-n").textContent = "?";
 });
