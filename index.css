@@ -1,0 +1,174 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#winner {
+  font-size: 60px;
+}
+.parent_div {
+  background: rgb(132, 127, 216);
+  border: 0.5px solid black;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  height: 16vh;
+}
+.green {
+  background: rgb(91, 202, 91);
+}
+
+.container-section {
+  background: rgb(132, 127, 216);
+  height: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.div-1,
+.div-0 {
+  background: rgb(116, 99, 79);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 50vh;
+  width: 350px;
+}
+.div-c {
+  background: rgb(217, 129, 129);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40vh;
+}
+
+button {
+  background: black;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+}
+.rules {
+  background: rgb(132, 127, 216);
+  height: 20vh;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-family: "Times New Roman", Times, serif;
+}
+h3 {
+  word-spacing: 4px;
+}
+.name-a h1 {
+  margin-bottom: 10px;
+}
+.name-b h1 {
+  margin-bottom: 10px;
+}
+button {
+  border: none;
+  background-color: #141415;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 15px;
+  transition: 0.3s linear;
+}
+
+button:hover {
+  transform: rotateX(15deg);
+  box-shadow: 0 15px 15px #656a6c;
+}
+/* ====================================== Main container responsve==============================*/
+
+@media (min-width: 375px) {
+  .container {
+    width: 100%;
+  }
+  .container-section {
+    height: 50vh;
+  }
+  .div-0,
+  .div-1,
+  .div-c {
+    height: 50vh;
+  }
+  button {
+    font-size: small;
+
+    height: 30px;
+    width: 60px;
+  }
+  .div-c {
+    width: 70px;
+  }
+  .container-section h1 {
+    font-size: small;
+  }
+  .rules {
+    letter-spacing: normal;
+    font-size: small;
+    height: 30vh;
+
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .container-section {
+    height: 60vh;
+  }
+  .div-0,
+  .div-1,
+  .div-c {
+    height: 50vh;
+    border-radius: 15px;
+  }
+  .rules {
+    letter-spacing: 2px;
+    font-size: small;
+    height: 20vh;
+    padding: 20px;
+  }
+  .rules h3 {
+    line-height: 3vh;
+  }
+  button {
+    font-size: 18px;
+    height: 40px;
+    width: 90px;
+  }
+  .div-c {
+    width: 200px;
+  }
+  .container-section h1 {
+    font-size: larger;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
