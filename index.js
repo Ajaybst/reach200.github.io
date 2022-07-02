@@ -3,7 +3,7 @@
 // ===================Player Switching Function==========================
 
 //
-console.log("hello");
+
 function switches() {
   document.querySelector(`.div-${activePlayer}`).style.background =
     "rgb(116, 99, 79)";
