@@ -4,175 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <title>Reach-100</title>
   </head>
   <body>
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-      }
-      h1 {
-        color: white;
-        font-size: 40px;
-      }
-      .parent_div {
-        background: black;
-        border: 2px solid white;
-        display: flex;
-        justify-content: center;
-      }
-      .child_div {
-        background: black;
-        border: 2px solid white;
-        text-align: center;
-        line-height: 150px;
-        height: 150px;
-
-        width: 350px;
-      }
-      .green {
-        background: green;
-      }
-      .container-a {
-        background: rgb(231, 7, 7);
-        border: 2px solid white;
-        display: flex;
-        justify-content: center;
-      }
-      .div-0 {
-        background: black;
-        border: 2px solid white;
-        position: relative;
-        height: 450px;
-        text-align: center;
-        width: 450px;
-      }
-      .div-1 {
-        background: black;
-        border: 2px solid white;
-        position: relative;
-        height: 450px;
-        text-align: center;
-        width: 450px;
-      }
-      .div-c {
-        align-self: center;
-        background: black;
-        border: 2px solid white;
-        text-align: center;
-        height: 250px;
-
-        width: 200px;
-      }
-      #cscore-0 {
-        position: absolute;
-        bottom: 50px;
-        left: 150px;
-      }
-      #cscore-1 {
-        position: absolute;
-        bottom: 50px;
-        left: 150px;
-      }
-      button {
-        background: black;
-        color: white;
-        margin: 5px;
-        padding: 5px;
-      }
-      .rules {
-        background: black;
-        width: 100%;
-        height: 100%;
-      }
-      h3 {
-        color: white;
-        word-spacing: 4px;
-      }
-      @media screen and (max-width: 968px) and (min-width: 760px) {
-        #cscore-0 {
-          left: 50px;
-        }
-        #cscore-1 {
-          left: 50px;
-        }
-        .div-c {
-          height: 350px;
-        }
-      }
-      @media screen and (max-width: 760px) {
-        #cscore-0 {
-          left: 2px;
-        }
-        #cscore-1 {
-          left: 2px;
-        }
-        .div-c {
-          align-self: center;
-
-          height: 400px;
-        }
-        .div {
-          height: 100px;
-          line-height: 100px;
-        }
-        .div-0 {
-          height: 400px;
-        }
-        .div-1 {
-          height: 400px;
-        }
-
-        h1 {
-          font-size: 28px;
-        }
-      }
-    </style>
-    <div class="parent_div">
-      <div class="child_div"><h1 id="winner">Let's Play</h1></div>
-    </div>
-    <div class="container-a">
-      <div class="div-0">
-        <div class="name-a">
-          <h1>Player-0</h1>
-          <br />
-          <h1>High-score: <span id="hs0">0</span></h1>
-          <h1 id="cscore-0">Score: <span class="cscore-0">0</span></h1>
+    <div class="container">
+      <div class="parent_div">
+        <img src="dice.png" alt="dice image" />
+        <div class="child_div">
+          <h1 id="winner">Let's Play</h1>
         </div>
       </div>
-      <div class="div-c">
-        <div class="dice"><h1 class="dice-n">?</h1></div>
-        <div>
-          <button class="roll"><h1>Roll</h1></button>
+      <section class="container-section">
+        <div class="div-0">
+          <div class="name-a">
+            <h1>Player-0</h1>
+
+            <h1>High-score: <span id="hs0">0</span></h1>
+          </div>
+          <div>
+            <h1 id="cscore-0">Score: <span class="cscore-0">0</span></h1>
+          </div>
         </div>
-        <div>
-          <button class="hold"><h1>Hold</h1></button>
-          <button class="try-again">Try-Again</button>
+        <div class="div-c">
+          <div class="dice"><h1 class="dice-n">?</h1></div>
+          <div>
+            <button class="roll"><h1>Roll</h1></button>
+          </div>
+          <div>
+            <button class="hold"><h1>Hold</h1></button>
+          </div>
+          <div>
+            <button class="try-again">Restart</button>
+          </div>
         </div>
-      </div>
-      <div class="div-1">
-        <div class="name-b">
-          <h1>Player-1</h1>
-          <br />
-          <h1>High-score: <span id="hs1">0</span></h1>
-          <h1 id="cscore-1">Score: <span class="cscore-1">0</span></h1>
+        <div class="div-1">
+          <div class="name-b">
+            <h1>Player-1</h1>
+
+            <h1>High-score: <span id="hs1">0</span></h1>
+          </div>
+          <div>
+            <h1 id="cscore-1">Score: <span class="cscore-1">0</span></h1>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="rules">
-      <h3>* Roll the dice, and boost your score till you get 1 in the dice.</h3>
-      <h3>
-        * If you get one your current score will be zero, and next player will
-        play
-      </h3>
-      <h3>
-        * press hold to safe your score, your score will be added to high score,
-        and second player will play.
-      </h3>
-      <h3>* First player touching 200 will win.</h3>
+      </section>
+      <footer class="rules">
+        <h3>
+          * Roll the dice, and boost your score till you get 1 in the dice.
+        </h3>
+        <h3>
+          * If you get one your current score will be zero, and next player will
+          play
+        </h3>
+        <h3>
+          * press hold to safe your score, your score will be added to high
+          score, and second player will play.
+        </h3>
+        <h3>* First player touching 200 will win.</h3>
+      </footer>
     </div>
   </body>
-  <script src="js.js"></script>
+  <script src="index.js"></script>
 </html>
