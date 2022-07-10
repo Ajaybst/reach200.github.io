@@ -94,15 +94,18 @@ button:hover {
 }
 /* ====================================== Main container responsve==============================*/
 
-@media (min-width: 375px) {
+@media (min-width: 355px) {
   .container {
     width: 100%;
   }
   .container-section {
     height: 50vh;
   }
+  #winner {
+    font-size: 50px;
+  }
   img {
-    height: 10vh;
+    height: 6vh;
   }
   .div-0,
   .div-1,
@@ -111,7 +114,6 @@ button:hover {
   }
   button {
     font-size: small;
-
     height: 30px;
     width: 60px;
   }
